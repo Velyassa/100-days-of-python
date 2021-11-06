@@ -1,0 +1,34 @@
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+# variables
+result = name1 + name2
+count1 = 0
+count2 = 0
+loveMessage = ''
+
+# for loop to check letters in the result
+for letter in result:
+  if letter.lower() in 'true':
+    count1 += 1 # hold and count the letters
+  if letter.lower() in 'love':
+    count2 += 1
+
+  # conver from string to int
+  result = int(str(count1) + str(count2))
+
+# if statement to check the results
+if result < 10 or result > 90:
+  loveMessage = ', you go toegther like coke and mentos.'
+if 40 < result < 50:
+  loveMessage = ', you are alright together.'
+else:
+  loveMessage = '.'
+
+# display the result and love message to the user
+print(f'Your score is {result}{loveMessage}')
